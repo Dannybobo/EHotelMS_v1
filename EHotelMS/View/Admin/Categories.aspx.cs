@@ -14,6 +14,7 @@ namespace EHotelMS.View.Admin
         {
             Con = new Models.Functions();
             ShowCategories();
+            LogUser.InnerText = Session["UserName"] as String;
         }
 
         private void ShowCategories()

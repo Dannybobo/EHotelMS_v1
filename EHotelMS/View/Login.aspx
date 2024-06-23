@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EHotelMS.View.Login" EnableEventValidation="false"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EHotelMS.View.Login" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -20,6 +20,7 @@
     <form id="form1" runat="server">
         <div>
             <div class="container-fluid">
+                
                 <div class="row" style="height: 200px"></div>
                 <div class="row">
                     <div class="col-md-4"></div>
@@ -27,17 +28,18 @@
                         <h1 class="text-success text-center">Hapi weekend Hotel</h1>
                         <form>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="EmailTb" />
+                                <label for="UserTb" class="form-label">User Name</label>
+                                <input type="text" class="form-control" id="UserTb" runat="server" required="required" />
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="PasswordTb" />
+                                <label for="PasswordTb" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="PasswordTb" runat="server" required="required" />
                             </div>
                             <div class="mb-3">
-                                <input name="Role" type="radio" class="form-radio-input" id="AdminCb" /><label class="text-success">&nbspAdmin</label>&nbsp&nbsp
-                                <input name="Role" type="radio" class="form-radio-input" id="UserCb" /><label class="text-success">&nbspUser</label>
-
+                                <input name="Role" type="radio" id="AdminCb" runat="server" /><label class="text-success">&nbspAdmin</label>&nbsp&nbsp
+                                <input name="Role" type="radio" id="UserCb" runat="server" /><label class="text-success">&nbspUser</label>
+                                <br />
+                                <label id="ErrMsg" class="text-danger" runat="server"></label>
                             </div>
                             <div class="d-grid">
                                 <asp:Button ID="LoginBtn" runat="server" Text="Login" class="btn btn-success btn-block" OnClick="LoginBtn_Click" />
