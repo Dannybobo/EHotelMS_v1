@@ -53,7 +53,7 @@ namespace EHotelMS.View.Admin
                 string Cost = CostTb.Value;
                 string Remark = RemarksTb.Value;
                 string Status = "Free";
-                string Query = "INSERT INTO roomTbl VALUES('{0}','{1}','{2}','{3}','{4}','{5}')";
+                string Query = "INSERT INTO RoomTbl VALUES('{0}','{1}','{2}','{3}','{4}','{5}')";
                 Query = string.Format(Query, RName, RCategory, Location, Cost, Remark, Status);
                 Con.setData(Query);
                 ShowRooms();

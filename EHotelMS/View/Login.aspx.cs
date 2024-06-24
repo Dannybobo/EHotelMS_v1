@@ -44,8 +44,8 @@ namespace EHotelMS.View
                 else
                 {
                     Session["UserName"] = dt.Rows[0][1].ToString();
-                    Session["UId"] = Convert.ToInt32(dt.Rows[0][0].ToString());
-                    Response.Redirect("Admin/Categories.aspx");
+                    Session["UId"] = dt.Rows[0][0].ToString();
+                    Response.Redirect("Users/Booking.aspx");
                 }
             }
         }
